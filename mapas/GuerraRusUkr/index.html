@@ -1,62 +1,104 @@
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        
-        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;700&display=swap" rel="stylesheet">
-        
-        <link rel="stylesheet" href="./resources/ol.css">
-        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
-        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
-        <link rel="stylesheet" href="./resources/qgis2web.css">
-        
-        <style>
-        html, body {
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Evita scrolls innecesarios */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartografia - Julian Gonzalez Gomez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    html, body {
+        background-image: url("background.png");
+        margin: 0;
+        padding: 0;
         }
 
         header {
-            width: 100%;
-            background-color: #4B5320;
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 10;
+        width: 100%;
+        background-color: #4B5320;
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 10;
         }
 
-        header h1 {
-            font-family: 'Yanone Kaffeesatz', sans-serif;
+        header h1, header h2{
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        color: #ffffff;
+        margin: 0;
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        }
+        img { 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        h1, h2 {
             color: #ffffff;
-            margin: 0;
-            font-size: 40px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-family: 'Rajdhani', sans-serif;
         }
 
-        </style>
-        <title>Rusia - Ukrania</title>
-    </head>
-    <body>
-        <header>
-            <h1>CARTOGRAFIA TEMATICA</h1>
-        </header>
+</style>
+<title>Rusia - Ukrania</title>
+</head>
+<body>
+<header class="main-header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="" onerror="this.style.display='none'">
+            <span>Guerra Rusia - Ukrania</span>
+        </a>
+        <button class="menu-toggle-btn" onclick="toggleMenu()">☰</button>
+    </div>
+</header>
+
+<nav id="side-menu" class="side-menu">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <div class="menu-content">
+        <span class="tag" style="color: var(--orange3);">NAVEGACIÓN</span>
+        <a href="index.html">Inicio</a>
+        <a href="_blank">Menu 2</a>
+        <a href="_blank">Menu 3</a>
+        <a href="_blank">Menu 4</a>
+        <a href="_blank">Menu 5</a>
+    </div>
+</nav>
+
+<main>
+
+    <div>
         <h2>Regiones Geopoliticas segun Mckinder</h2>
-        <img src="mapa1.png" class="w3-border w3-padding" alt="Mapa 1" style="width:100%;max-width:400px">
         <img src="mapa2.jpeg" class="w3-border w3-padding" alt="Norway" style="width:100%;max-width:400px">
-        
+    </div>
+                
+    <div>
         <h2>Division Politica Rusa</h2>
-        <img src="mapa1.png" class="w3-border w3-padding" alt="Norway" style="width:100%;max-width:400px">
+        <img src="mapa4.png" class="w3-border w3-padding" alt="Norway" style="width:100%;max-width:400px">
+    </div>
+        
+    <div>
+        <h2>Division Politica Rusa - Administracion</h2>
+        <img src="mapa5.png" class="w3-border w3-padding" alt="Norway" style="width:100%;max-width:400px">
+    </div>
 
-        <h2>Division Politica Ukraniana</h2>
-        <img src="mapa1.png" class="w3-border w3-padding" alt="Norway" style="width:100%;max-width:400px">
+    <div>
+        <h2>Recursos Naturales de Ukrania</h2>
+        <img src="mapa3.png" class="w3-border w3-padding" alt="Norway" style="width:100%;max-width:400px">
+    </div>
+</main>
+        
+<script src="script.js"></script>
 
+<footer class="main-footer">
+    <p>Julian Gonzalez Gomez<br><br>2026</p>
+</footer>
+    </body>
 </html>
 
